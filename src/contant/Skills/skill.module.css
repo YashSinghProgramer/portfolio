@@ -143,3 +143,106 @@ animation: Flote 3s ease-in-out infinite;
         
     }
 }
+
+/* ==========================================
+   MEDIA QUERIES FOR SKILLS SECTION (.skillCon)
+   ========================================== */
+
+/* 1. TABLET LAYOUT (Screens up to 768px) */
+@media screen and (max-width: 768px) {
+    .skillCon {
+        height: auto; /* Height auto ki taaki scroll bar ban sake */
+        min-height: 100vh;
+        padding: 40px 0;
+        overflow-y: auto;
+    }
+
+    .skillhead {
+        font-size: 45px; /* Font size tablet ke hisab se scaling */
+        height: auto;
+        width: 80%;
+        padding: 15px 0;
+    }
+
+    .skillheadlinecon {
+        font-size: 14px;
+    }
+
+    .skillheadline {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .skillsCardCon {
+        height: auto; /* Fixed 50vh hataya */
+        flex-wrap: wrap; /* Cards automatic space na hone par next line me aa jayenge */
+        gap: 25px; /* Cards ke beech gap block level par */
+        padding: 30px 20px;
+    }
+
+    .skillCard {
+        width: 180px; /* Thoda optimize kiya size tablet layout ke liye */
+        height: 240px;
+    }
+}
+
+
+/* 2. MOBILE LAYOUT (Screens up to 480px) */
+@media screen and (max-width: 480px) {
+    .skillCon {
+        padding: 30px 10px;
+    }
+
+    .skillhead {
+        font-size: 32px; /* Mobile screen standard size */
+        width: 90%;
+        border-radius: 15px;
+    }
+
+    .skillheadlinecon {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    .skillheadline>span {
+        font-size: 15px;
+    }
+    
+    .skillheadline>span:hover {
+        font-size: 16px;
+    }
+
+    .skillsCardCon {
+        flex-direction: column; /* Mobile par card ek ke neeche ek aayenge single column me */
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .skillCard {
+        width: 85%; /* Grid box full size stretch mobile scaling */
+        max-width: 260px;
+        height: 230px;
+    }
+
+    .skilllogo>img {
+        height: 60%; /* Logo size scaling inside card */
+        width: 35%;
+    }
+
+    .skillname {
+        font-size: 18px;
+    }
+
+    .skillproject {
+        font-size: 13px;
+        margin-left: 0; /* Center content mobile alignment */
+        padding: 0 5px;
+    }
+
+    /* Yellow background glow effect mobile ke hisab se resize kiya */
+    .skillCon::before {
+        width: 260px;
+        height: 260px;
+        filter: blur(80px);
+    }
+}
