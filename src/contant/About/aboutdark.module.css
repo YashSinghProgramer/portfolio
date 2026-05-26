@@ -213,3 +213,132 @@ gap: 20px;
     margin-left: 10px;
     font-size: large;
 }
+
+
+/* ==========================================
+   MEDIA QUERIES FOR RESPONSIVE DESIGN
+   ========================================== */
+
+/* 1. TABLET LAYOUT (Screens up to 768px) */
+@media screen and (max-width: 768px) {
+    .aboutcon {
+        height: auto; /* Height auto ki taaki scroll ho sake agar content badhe */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column; /* Sidebar top par chala jayega aur content neeche */
+        overflow-y: auto;
+    }
+
+    /* Sidebar adjustments */
+    .nav {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        flex-direction: row; /* Nav links aur image ko side-by-side karne ke liye */
+        justify-content: space-around;
+    }
+
+    .nav>img {
+        height: 80px;
+        width: 80px; /* Tablet par avatar chota aur circular rahega */
+        margin-top: 0;
+    }
+
+    .nav>ul {
+        height: auto;
+        width: auto;
+        flex-direction: row; /* Links row me aa jayenge */
+        gap: 15px;
+    }
+
+    /* Main Content adjustments */
+    .logo {
+        position: relative; /* Fixed positions tablet par break hoti hain */
+        width: 100vw;
+        height: auto;
+        top: 0;
+        right: 0;
+        padding: 40px 20px;
+    }
+
+    .logo > h1 {
+        font-size: 50px; /* Font size choti ki */
+        height: auto;
+        width: 85%;
+        padding: 15px;
+    }
+
+    .logo > h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Description Blocks */
+    .para {
+        flex-direction: column; /* Boxes ek ke neeche ek aayenge */
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .para>h3 {
+        width: 85%; /* Dono boxes desktop se bade aur full width ke paas dikhenge */
+        height: auto; /* Fixed height hatayi taaki text overlap na ho */
+    }
+}
+
+
+/* 2. MOBILE LAYOUT (Screens up to 480px) */
+@media screen and (max-width: 480px) {
+    .nav {
+        flex-direction: column; /* Mobile par wapas upar-neeche stack kiya */
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .nav>img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .nav>ul {
+        gap: 10px;
+    }
+
+    .nav>ul>li {
+        font-size: 16px; /* Chota font mobile ke liye */
+    }
+
+    .logo > h1 {
+        font-size: 36px; /* Title clear dikhega bina screen se bahar jaye */
+        width: 90%;
+        border-radius: 15px;
+    }
+
+    .logo > h2 {
+        font-size: 18px;
+        flex-wrap: wrap; /* Text next line me wrap ho sake */
+    }
+
+    .logo > h2 > span {
+        font-size: 20px;
+    }
+
+    .para>h3 {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .para>h3>ul {
+        font-size: 15px;
+    }
+
+    /* Glowing effect ko thoda chota kiya mobile screen ke liye */
+    .aboutcon::before {
+        width: 250px;
+        height: 250px;
+        filter: blur(70px);
+    }
+}
