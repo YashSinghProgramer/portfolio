@@ -24,7 +24,7 @@
    
     animation: Glow 4s infinite ease-in-out;
 }
-.skillCon*{
+.skillCon * {
      position: relative;
     z-index: 1;
 }
