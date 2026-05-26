@@ -1,7 +1,7 @@
 // nav.jsx
 import React, { useContext } from 'react';
 import { ThemeContext } from './ThemeContext.jsx'; // 1. Yeh import karna zaroorat tha
-import Style from "./herodark.module.css"; // (Agar iska use nahi ho raha toh ise hata bhi sakte ho)
+
 
 function Nav() {
   // Context se dono cheezein sahi se nikal li
