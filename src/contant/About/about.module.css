@@ -216,52 +216,61 @@ gap: 20px;
    ========================================== */
 
 /* 1. TABLET LAYOUT (Screens up to 768px) */
+/* ==========================================
+   RE-OPTIMIZED MEDIA QUERIES FOR ABOUT SECTION (.aboutcon)
+   ========================================== */
+
+/* 1. TABLET LAYOUT (Screens up to 768px) */
 @media screen and (max-width: 768px) {
     .aboutcon {
-        height: auto; /* Height auto ki taaki scroll ho sake agar content badhe */
+        height: auto; /* Fixed vh hataya taaki scrolling smooth ho */
         min-height: 100vh;
         display: flex;
-        flex-direction: column; /* Sidebar top par chala jayega aur content neeche */
+        flex-direction: column; /* Grid horizontal se vertical ho gaya */
         overflow-y: auto;
+        padding-bottom: 40px;
     }
 
-    /* Sidebar adjustments */
+    /* Sidebar/Navbar layout adjustments */
     .nav {
         width: 100%;
         height: auto;
-        padding: 20px 0;
-        flex-direction: row; /* Nav links aur image ko side-by-side karne ke liye */
+        flex-direction: row; /* Links aur Avatar side-by-side aayenge */
         justify-content: space-around;
+        padding: 20px 10px;
+        box-sizing: border-box;
     }
 
     .nav>img {
-        height: 80px;
-        width: 80px; /* Tablet par avatar chota aur circular rahega */
+        height: 75px;
+        width: 75px;
         margin-top: 0;
     }
 
     .nav>ul {
         height: auto;
         width: auto;
-        flex-direction: row; /* Links row me aa jayenge */
-        gap: 15px;
+        flex-direction: row; /* Nav list row format me */
+        gap: 20px;
     }
 
-    /* Main Content adjustments */
+    /* Main Content Area - Fixing the Overflow Bug */
     .logo {
-        position: relative; /* Fixed positions tablet par break hoti hain */
-        width: 100vw;
+        position: relative; /* Absolute hataya taaki content flow me rahe aur bahar na bhage */
+        top: 0 !important;
+        right: 0 !important;
+        width: 100%;
         height: auto;
-        top: 0;
-        right: 0;
-        padding: 40px 20px;
+        padding: 30px 15px;
+        box-sizing: border-box;
     }
 
     .logo > h1 {
-        font-size: 50px; /* Font size choti ki */
+        font-size: 45px; /* Font size chota kiya */
         height: auto;
         width: 85%;
         padding: 15px;
+        text-align: center;
     }
 
     .logo > h2 {
@@ -269,18 +278,19 @@ gap: 20px;
         text-align: center;
     }
 
-    /* Description Blocks */
+    /* Description Boxes Layout */
     .para {
-        flex-direction: column; /* Boxes ek ke neeche ek aayenge */
+        flex-direction: column; /* Dono boxes ek ke neeche ek aayenge */
         align-items: center;
         margin-left: 0;
         width: 100%;
-        gap: 25px;
+        gap: 20px;
     }
 
     .para>h3 {
-        width: 85%; /* Dono boxes desktop se bade aur full width ke paas dikhenge */
-        height: auto; /* Fixed height hatayi taaki text overlap na ho */
+        width: 85%; /* Pure viewport me proper margins ke sath set hoga */
+        height: auto; /* Fixed 240px hataya taaki text automatic space le sake */
+        min-height: 180px;
     }
 }
 
@@ -288,33 +298,38 @@ gap: 20px;
 /* 2. MOBILE LAYOUT (Screens up to 480px) */
 @media screen and (max-width: 480px) {
     .nav {
-        flex-direction: column; /* Mobile par wapas upar-neeche stack kiya */
+        flex-direction: column; /* Mobile par stack structure */
         gap: 15px;
         padding: 15px 0;
     }
 
     .nav>img {
-        height: 70px;
-        width: 70px;
+        height: 65px;
+        width: 65px;
     }
 
     .nav>ul {
-        gap: 10px;
+        gap: 12px;
     }
 
     .nav>ul>li {
-        font-size: 16px; /* Chota font mobile ke liye */
+        font-size: 16px;
+    }
+
+    .logo {
+        padding: 20px 10px;
+        gap: 20px;
     }
 
     .logo > h1 {
-        font-size: 36px; /* Title clear dikhega bina screen se bahar jaye */
+        font-size: 32px; /* Choti screens ke liye perfect headings */
         width: 90%;
         border-radius: 15px;
     }
 
     .logo > h2 {
         font-size: 18px;
-        flex-wrap: wrap; /* Text next line me wrap ho sake */
+        flex-wrap: wrap; /* Text mobile width ke hisab se automatic wrap hoga */
     }
 
     .logo > h2 > span {
@@ -328,13 +343,14 @@ gap: 20px;
     }
     
     .para>h3>ul {
-        font-size: 15px;
+        font-size: 14px;
+        padding-left: 10px;
     }
 
-    /* Glowing effect ko thoda chota kiya mobile screen ke liye */
+    /* Mobile ke liye glow effect thoda transparent kiya */
     .aboutcon::before {
-        width: 250px;
-        height: 250px;
-        filter: blur(70px);
+        width: 240px;
+        height: 240px;
+        filter: blur(80px);
     }
 }
