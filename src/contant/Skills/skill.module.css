@@ -220,7 +220,7 @@ animation: Flote 3s ease-in-out infinite;
 
     .skillCard {
         width: 85%; /* Grid box full size stretch mobile scaling */
-        max-width: 260px;
+        max-width: 350px;
         height: 230px;
     }
 
