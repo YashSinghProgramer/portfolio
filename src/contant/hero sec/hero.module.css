@@ -414,4 +414,7 @@ filter: blur(1px);
         top: 45%;
         opacity: 0.25;
     }
+     .robot {
+        display: none !important; /* Isse tablet aur mobile dono par robot hide ho jayega */
+    }
 }
