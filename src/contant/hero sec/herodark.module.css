@@ -276,3 +276,147 @@ filter: blur(1px);
         opacity: 1;
     }
 }
+
+
+/* ==========================================
+   MEDIA QUERIES FOR HERO SECTION (.herocon)
+   ========================================== */
+
+/* 1. TABLET LAYOUT (Screens up to 768px) */
+@media screen and (max-width: 768px) {
+    .herocon {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    /* Navbar standard padding adjustment */
+    .nav {
+        width: 90%;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: xl-large;
+    }
+
+    .nav>ul {
+        gap: 15px;
+        font-size: sm;
+    }
+
+    /* Splitted content ko stacked layout banaya */
+    .herossmallcon {
+        position: relative;
+        flex-direction: column; /* Row se Column kiya */
+        height: auto;
+        padding-top: 100px; /* Navbar ke neeche se start ho */
+    }
+
+    .leftherocon {
+        width: 100%; /* Full width */
+        align-items: center; /* Center alignment for tablet */
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .leftherocon> h1, .leftherocon>h2, .leftherocon>p {
+        margin-left: 0; /* Left margin hataya */
+    }
+
+    .leftherocon>h1 {
+        font-size: 38px;
+    }
+
+    .leftherocon>h2 {
+        font-size: 42px;
+    }
+
+    .leftherocon>h2>span {
+        font-size: 45px;
+    }
+
+    .rightherocon {
+        width: 100%; /* Full width */
+        height: auto;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .rightherocon>p {
+        margin: 0;
+        margin-bottom: 40px;
+        text-align: center;
+        max-width: 80%;
+    }
+
+    /* Background MERN Text Scaling */
+    .mern {
+        font-size: 100px; /* Font chota kiya taaki screen me fit ho */
+        height: auto;
+        top: 40%;
+        opacity: 0.4; /* Opacity kam ki taaki foreground text visible rahe */
+    }
+}
+
+
+/* 2. MOBILE LAYOUT (Screens up to 480px) */
+@media screen and (max-width: 480px) {
+    .navcn {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .nav {
+        flex-direction: column; /* Mobile par logo, links aur toggle stack ho jaye */
+        height: auto;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .nav>ul {
+        gap: 12px;
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .tongle {
+        height: 25px; /* Fixed size toggler mobile ke liye */
+        width: 50px;
+        margin-right: 0;
+    }
+
+    .herossmallcon {
+        padding-top: 160px; /* Extra space kyunki mobile navbar lamba ho gaya hai */
+    }
+
+    .leftherocon>h1 {
+        font-size: 28px;
+    }
+
+    .leftherocon>h2 {
+        font-size: 32px;
+    }
+
+    .leftherocon>h2>span {
+        font-size: 34px;
+    }
+
+    .rightherocon>p {
+        font-size: 15px;
+        max-width: 90%;
+    }
+
+    /* MERN Background Text mobile ke hisab se responsive */
+    .mern {
+        font-size: 60px; /* Ekdum chota kiya taaki screen overflow na ho */
+        gap: 8px;
+        top: 45%;
+        opacity: 0.25;
+    }
+}
