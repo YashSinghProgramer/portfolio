@@ -1,12 +1,13 @@
 import {useContext} from 'react'
 import { ThemeContext } from '../hero sec/ThemeContext.jsx'
-
+import kilogramlogo from './kilogram.png'
 const details=[
-    {
-        img:"",
+   {
+        img:kilogramlogo,
         name:"Kilogram",
         desc:"A Instagram Clone UI, app using React and CSS.",
-        btn1:"https://kilogramcom.vercel.app/",
+        Link:"https://kilogramcom.vercel.app/",
+        btn1:"Visit",
         btn2:"<Code />",
         staus:"On Testing",
         catagory:"Frontend",
@@ -26,7 +27,7 @@ function Card({ selectedCategory }) {
   return (
     
     <div className={themeProject.Cardcon} >
-        <h1>We Are Working On Projects</h1>
+        {/* <h1>We Are Working On Projects</h1> */}
    {filteredDetails.map((item,index)=>(
 
     <div className={themeProject.card} key={index}>
@@ -35,7 +36,10 @@ function Card({ selectedCategory }) {
 <h2>{item.name}<ul><li>{item.staus}</li></ul></h2>
 <h4>{item.desc}</h4>
 <div className={themeProject.btn}>
-    <button className={themeProject.btn1}>{item.btn1}</button>
+ <a href={item.Link} target="_blank" rel="noopener noreferrer">
+              <button className={themeProject.btn1}>{item.btn1}</button>
+            </a>
+    
     <button className={themeProject.btn2}>{item.btn2}</button>
 </div>
 
