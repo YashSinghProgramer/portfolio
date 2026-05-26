@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import { ThemeContext } from '../hero sec/ThemeContext.jsx';
-import logo from "../../../../Portfolio/src/assets/aboutlogo.png"
+import logo from "./aboutlogo.png"
 function Aboutnav() {
   const { themeAbout } = useContext(ThemeContext);
 
