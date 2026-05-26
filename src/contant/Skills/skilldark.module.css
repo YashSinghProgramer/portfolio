@@ -242,53 +242,49 @@ animation: Flote 3s ease-in-out infinite;
 
 /* 2. MOBILE LAYOUT (Screens up to 480px) */
 @media screen and (max-width: 480px) {
-    .skillCon {
-        padding: 30px 10px;
+   @media screen and (max-width: 480px) {
+    /* Main container jisme saare cards hain */
+    .skillsCardCon {
+        display: flex;
+        flex-direction: row; /* Row hi rakhenge */
+        flex-wrap: wrap;     /* Taki cards auto next line me aayein */
+        justify-content: center;
+        gap: 15px;           /* Cards ke beech ka gap */
+        padding: 20px 10px;
+        height: auto;
     }
 
-    .skillhead {
-        font-size: 32px; /* Mobile screen standard size */
-        width: 90%;
+    /* Aapka single Skill Card */
+    .skillCard {
+        width: 44%;          /* Screen ke hisab se automatic 2 cards fit honge */
+        height: 180px;       /* Mobile ke liye best balanced height */
         border-radius: 15px;
     }
 
-    .skillheadlinecon {
-        font-size: 13px;
-        margin-top: 10px;
-    }
-
-    .skillheadline>span {
-        font-size: 15px;
-    }
-    
-    .skillheadline>span:hover {
-        font-size: 16px;
-    }
-
-    .skillsCardCon {
-        flex-direction: column; /* Mobile par card ek ke neeche ek aayenge single column me */
-        gap: 20px;
-        padding: 20px 0;
-    }
-
-    .skillCard {
-        width: 85%; /* Grid box full size stretch mobile scaling */
-        max-width: 260px;
-        height: 230px;
+    /* Logo structure inside card */
+    .skilllogo {
+        height: 55%;
     }
 
     .skilllogo>img {
-        height: 60%; /* Logo size scaling inside card */
-        width: 35%;
+        height: 55%;        /* Logo image size choti ki taki float achhe se kare */
+        width: 55%;
+    }
+
+    /* Text Area adjustments */
+    .skilltextCon {
+        height: 45%;
     }
 
     .skillname {
-        font-size: 18px;
+        font-size: 15px;     /* Name thoda chota kiya taki box se bahar na aaye */
+        height: auto;
     }
 
     .skillproject {
-        font-size: 13px;
-        margin-left: 0; /* Center content mobile alignment */
+        font-size: 11px;     /* Project text clear aur accurate dikhega */
+        margin-top: 2px;
+        margin-left: 0;
         padding: 0 5px;
     }
 
@@ -298,4 +294,5 @@ animation: Flote 3s ease-in-out infinite;
         height: 260px;
         filter: blur(80px);
     }
+}
 }
