@@ -206,6 +206,7 @@ animation: Flote 3s ease-in-out infinite;
     .skillCon {
         height: auto; /* Height auto ki taaki scroll bar ban sake */
         min-height: 100vh;
+        max-width: 10vw;
         padding: 40px 0;
         overflow-y: auto;
     }
