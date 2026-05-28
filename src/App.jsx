@@ -1,23 +1,15 @@
-import Herosec from "./contant/hero sec/herosec.jsx"
-import Appe from "./test.jsx";
-import About from "./contant/About/about.jsx";
-import Project from "./contant/Project/project.jsx";
-import { ThemeProvider } from "./contant/hero sec/ThemeContext.jsx";
-import Skill from "./contant/Skills/Skill.jsx";
-import './App.css'
+import Portfolio from "./contant/portfolio.jsx";
+import "./App.css";
+
+import { Routes, Route } from "react-router-dom";
+import Errorfile from "./contant/404/404error.jsx";
 function App() {
-  return <div >
-    
-    <ThemeProvider>
-      <Herosec />
-      <About />
-      <Project />
-      <Skill />
-    </ThemeProvider>
-       
-  </div>
- 
-  
+	return (
+		<Routes>
+			<Route path="/" element={<Portfolio />} />
+			<Route path="*" element={<Errorfile />} />
+		</Routes>
+	);
 }
 
 export default App;
