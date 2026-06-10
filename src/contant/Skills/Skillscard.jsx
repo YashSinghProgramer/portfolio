@@ -46,11 +46,6 @@ const skillData = [
 	//     logo:"https://img.icons8.com/?size=100&id=wPohyHO_qO1a&format=png&color=000000",
 	//     totalProjects:"01"
 	// },
-	{
-		name: "Github",
-		logo: "https://img.icons8.com/?size=100&id=efFfwotdkiU5&format=png&color=000000",
-		totalProjects: "00",
-	},
 ];
 function Skillscard() {
 	const { themeSkill } = React.useContext(ThemeContext);
