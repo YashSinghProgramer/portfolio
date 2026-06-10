@@ -23,7 +23,7 @@ const skillData = [
 	},
 	{
 		name: "Express.js",
-		logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000",
+		logo: "https://img.icons8.com/?size=100&id=WNoJgbzDr3i2&format=png&color=000000",
 		totalProjects: "01",
 	},
 	{
