@@ -7,6 +7,7 @@ const details = [
 		name: "Kilogram",
 		desc: "A Instagram Clone UI, app using HTML/CSS, React, Express.JS, MongoDB.",
 		Link: "https://kilogramcom.vercel.app/",
+		Codelink: "https://github.com/YashSinghProgramer/Kilogram.com",
 		btn1: "Visit",
 		btn2: "<Code />",
 		staus: "On Testing",
@@ -38,8 +39,9 @@ function Card({ selectedCategory }) {
 						<a href={item.Link} target="_blank" rel="noopener noreferrer">
 							<button className={themeProject.btn1}>{item.btn1}</button>
 						</a>
-
-						<button className={themeProject.btn2}>{item.btn2}</button>
+						<a href={item.Codelink} target="_blank">
+							<button className={themeProject.btn2}>{item.btn2}</button>
+						</a>
 					</div>
 				</div>
 			))}
