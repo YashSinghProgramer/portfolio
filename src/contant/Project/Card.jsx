@@ -11,7 +11,7 @@ const details = [
 		btn1: "Visit",
 		btn2: "<Code />",
 		staus: "On Testing",
-		catagory: "Frontend",
+		catagory: "fullstack",
 	},
 ];
 
