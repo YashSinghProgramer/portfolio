@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../hero sec/ThemeContext.jsx";
 import kilogramlogo from "./kilogram.png";
+import Hireuslogo from "./hireus.png";
+
 const details = [
 	{
 		img: kilogramlogo,
@@ -14,7 +16,7 @@ const details = [
 		catagory: "fullstack",
 	},
 	{
-		img: "/Hireus.png",
+		img: Hireuslogo,
 		name: "HireUs",
 		desc: "A Interview Practice app using HTML/CSS, React, Express.JS, Gemini API.",
 		Link: "https://hire-us-omega.vercel.app/",
