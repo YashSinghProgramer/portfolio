@@ -14,7 +14,7 @@ const details = [
 		catagory: "fullstack",
 	},
 	{
-		img: kilogramlogo,
+		img: Hireus,
 		name: "HireUs",
 		desc: "A Interview Practice app using HTML/CSS, React, Express.JS, Gemini API.",
 		Link: "https://hire-us-omega.vercel.app/",
